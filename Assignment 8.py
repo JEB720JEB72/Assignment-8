@@ -5,12 +5,25 @@
 
 def main():
     #abc
-    pass
+    user_text = input("please enter a number, which can be hex or decimal")
+    
+    number, flavor = parse_input(user_text)
+    results = convert_to_binary(number,flavor)
+    print(results)
 
-def parse_input():
-    #xyz
-    pass
+def parse_input(new):
+    #deliniate between hex and decimal and convert
+    if new.lower().startswith("0x"): 
+        number = int(new,16)
+        flavor = "hex"
+    else:
+        number = int(new)
+        flavor = "dec"
+    return number, flavor
 
-def convert_to_binary ():
+def convert_to_binary (number,flavor):
     #abc
-    pass
+    binary_string = bin(number)[2:]
+    return "excellent, the binary is: " + binary_string
+
+main()
