@@ -22,7 +22,7 @@ def parse_input(new):
     return number, flavor
 
 def convert_to_binary (number,flavor):
-    #abc
+    """Convert the integer to a binary string."""
     binary_string = bin(number)[2:]
     return "excellent, the binary is: " + binary_string
 
