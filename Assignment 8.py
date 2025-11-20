@@ -12,7 +12,7 @@ def main():
     print(results)
 
 def parse_input(new):
-    #deliniate between hex and decimal and convert
+    """Determine whether input is hex or decimal and convert."""
     if new.lower().startswith("0x"): 
         number = int(new,16)
         flavor = "hex"
