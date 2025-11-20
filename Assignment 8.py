@@ -4,7 +4,7 @@
 
 
 def main():
-    #starts the program and prompts the user
+    """Gather input from the user and coordinate program flow."""
     user_text = input("please enter a number, which can be hex or decimal")
     
     number, flavor = parse_input(user_text)
